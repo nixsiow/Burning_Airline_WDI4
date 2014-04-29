@@ -20,7 +20,7 @@ development:
   database: burning_airline_development
   pool: 5
   host: localhost
-  username: NixSiow
+  username: charlieg
   password:
 
  
