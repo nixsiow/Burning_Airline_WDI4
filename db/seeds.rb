@@ -27,7 +27,4 @@ r1 = Reservation.new(:user_id => 1, :flight_id => 1, :seat_id => 1)
 r1.save
 
 
-a1 << f1
-
-
 
