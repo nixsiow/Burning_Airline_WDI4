@@ -1,4 +1,4 @@
-BurningAirline.Views.TweetListView = Backbone.View.extend({
+BurningAirline.Views.FlightListView = Backbone.View.extend({
   tagName: 'li',
   events: {
     'click': 'viewFlight'
