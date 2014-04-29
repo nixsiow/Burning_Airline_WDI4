@@ -7,7 +7,7 @@ Reservation.destroy_all
 
 
 # Users' Seed
-u1 = User.new(:username => 'nix', :email => 'nixsiow@hotmail.com', :password => 'abcd1234', :password_confirmation => 'abcd1234')
+u1 = User.new(:username => 'user1', :email => 'user1@user.com', :password => 'abcd1234', :password_confirmation => 'abcd1234')
 u1.save
 
 # Airplace' Seed
