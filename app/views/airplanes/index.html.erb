@@ -1,0 +1,31 @@
+<h1>Listing airplanes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Row</th>
+      <th>Column</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @airplanes.each do |airplane| %>
+      <tr>
+        <td><%= airplane.name %></td>
+        <td><%= airplane.row %></td>
+        <td><%= airplane.column %></td>
+        <td><%= link_to 'Show', airplane %></td>
+        <td><%= link_to 'Edit', edit_airplane_path(airplane) %></td>
+        <td><%= link_to 'Destroy', airplane, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Airplane', new_airplane_path %>
