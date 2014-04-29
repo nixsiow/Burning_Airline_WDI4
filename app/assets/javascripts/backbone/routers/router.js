@@ -1,18 +1,19 @@
-BunringAirlineAjax.Routers.appRouter = Backbone.Router.extend({
+BurningAirline.Routers.appRouter = Backbone.Router.extend({
   routes: {
     '': 'index',
-    'tweets/:id': 'showTweet',
+    'flights/:id': 'showFlight',
     '*anything': 'goHome'
   },
 
   index: function () {
-    var view = new TwitterAjax.Views.AppView({collection: TwitterAjax.twitterTweets});
+    console.log('here')
+    var view = new BurningAirline.Views.AppView({collection: BurningAirline.burningFlights});
     view.render();
   },
 
-  showTweet: function (id) {
-    var tweet = TwitterAjax.twitterTweets.get(id);
-    new TwitterAjax.Views.TweetView({model: tweet});
+  showFlight: function (id) {
+    var flight = BurningAirline.burningFlights.get(id);
+    new BurningAirline.Views.FlightView({model: flight});
   },
 
   goHome: function () {
