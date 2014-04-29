@@ -1,6 +1,9 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
+  def landing
+  end
+
   # GET /flights
   # GET /flights.json
   def index
