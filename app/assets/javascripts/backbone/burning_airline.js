@@ -1,11 +1,12 @@
-#= require_self
-#= require_tree ./templates
-#= require_tree ./models
-#= require_tree ./views
-#= require_tree ./routers
+//= require_self
+//= require_tree ./templates
+//= require_tree ./models
+//= require_tree ./views
+//= require_tree ./routers
 
-window.BurningAirline =
+window.BurningAirline = {
   Models: {}
   Collections: {}
   Routers: {}
   Views: {}
+}
