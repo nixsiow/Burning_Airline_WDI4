@@ -4,8 +4,9 @@
 #= require_tree ./views
 #= require_tree ./routers
 
-window.BurningAirline =
-  Models: {}
-  Collections: {}
-  Routers: {}
+window.BurningAirline = {
+  Models: {},
+  Collections: {},
+  Routers: {},
   Views: {}
+}

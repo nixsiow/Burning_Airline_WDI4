@@ -1,1 +1,3 @@
-router.js
+BurningAirline.Routers.appRouter = Backbone.Router.extend({
+	
+})

@@ -1,1 +1,3 @@
-flightView.js
+BurningAirline.Views.FlightView = Backbone.View.extend({
+	
+})
