@@ -14,3 +14,8 @@
  */
 
 @import "bootstrap.css";
+
+body {
+  mix-width: 960px;
+  margin: 0 auto;
+}
