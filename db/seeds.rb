@@ -11,7 +11,7 @@ u1 = User.new(:username => 'nix', :email => 'nixsiow@hotmail.com', :password => 
 u1.save
 
 # Airplace' Seed
-a1 = Airplane.new(:name => '707', :row => 'A', :column => '2')
+a1 = Airplane.new(:name => '707', :row => '24', :column => '4')
 a1.save
 
 # Flight' Seed
@@ -19,7 +19,7 @@ f1 = Flight.new(:flight_no => 'BX788', :origin => 'syd', :destination => 'ldn', 
 f1.save
 
 # Seat' Seed
-s1 = Seat.new(:column_row => 'A8', :flight_id => 1, :available => true)
+s1 = Seat.new(:column_row => 'A8', :flight_id => 1, :available => false)
 s1.save
 
 # Reservation' Seed
