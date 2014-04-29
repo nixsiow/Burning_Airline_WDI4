@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Reset the database
+User.destroy_all
+Airplane.destroy_all
+Flight.destroy_all
+Seat.destroy_all
+Reservation.destroy_all
+
+
+# Users' Seed
+u1 = User.new(:username => 'nix', :email => 'nixsiow@hotmail.com', :password => 'abcd1234', :password_confirmation => 'abcd1234')
+u1.save
+
+# Airplace' Seed
+a1 = Airplane.new(:name => '707', :row => 'A', :column => '2')
+a1.save
+
+# Flight' Seed
+f1 = Flight.new(:flight_no => 'BX788', :origin => 'syd', :destination => 'ldn', :data => 'friday', :airplane_id => 1)
+f1.save
+
+# Seat' Seed
+s1 = Seat.new(:column_row => 'A8', :flight_id => 1, :available => true)
+s1.save
+
+# Reservation' Seed
+r1 = Reservation.new(:user_id => 1, :flight_id => 1, :seat_id => 1)
+r1.save
+
+
+a1 << f1
+
+
+
