@@ -6,32 +6,34 @@
 
 
 <script id="appView" type="text/x-underscore-template">
-  <h1>All Flights</h1>
+  <!-- The title All flights will be hidden at first, it will be displayed only after a user makes a search -->
+  <h1 class="flights_title">All Flights</h1>
   <ul id="flights"></ul>
 
   <!-- form to make a search -->
   <form>
-    <h1>Search</h1>
-    <input id="origin" class="form-control" placeholder="Origin">
-    <input id="destination" class="form-control" placeholder="Destination">
+    <h1>Search flights</h1>
+    <input id="origin" class="form-control" placeholder="From">
+    <input id="destination" class="form-control" placeholder="To">
     <button class="btn btn-success">Search</button>
   </form>
   <br>
 </script>
 
 <script id="flightListView" type="text/x-underscore-template">
-  <a href="#flights/{{ id }}">Flight Reference: {{ flight_no }}, Origin: {{origin}}, Destination: {{destination}}, "Date: " {{date}}, Airplane id:  {{airplane_id}}, flight id: {{id}} </a>
+  <a href="#flights/{{ id }}">From: {{origin}}, To: {{destination}}, Flight Reference: {{ flight_no }}, Date: {{date}}, Airplane id:  {{airplane_id}}, flight id: {{id}} </a>
 </script>
 
  <script id="flightView" type="text/x-underscore-template">
   <div class="flight">
     <div class="content">
-      <p>{{ flight_no }}</p>
-      <p>{{ origin }}</p>
-      <p>{{ destination }}</p>
-      <p>{{ date }}</p>
-      <p>{{ airplane_id }}</p>
-      <p>{{ seatCount }}</p>
+      <p><strong>Flight reference number:</strong> {{ flight_no }}</p>
+      <p><strong>From: </strong> {{ origin }}</p>
+      <p><strong>To:</strong> {{ destination }}</p>
+      <p><strong>Date: </strong> {{ date }}</p>
+      <p><strong>Airplane id:</strong> {{ airplane_id }}</p>
+      <p><strong>Number of seats: </strong> {{ seatCount }}</p>
+      <button>Book flight</button>
     </div>
     <hr>
   </div>
