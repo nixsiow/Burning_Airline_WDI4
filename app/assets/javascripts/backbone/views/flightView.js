@@ -6,7 +6,7 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
   },
 
   turnFalse: function() {
-    debugger;
+    
     alert("congratulations, you've booked a flight on Burning Airlines")
     var id = $(this).attr("id");
     // // console.log($(this));
