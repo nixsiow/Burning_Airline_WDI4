@@ -34,6 +34,34 @@ html > body {
   display: none;
 }
 
+/*Class to design the seats */
+.true{
+  background-color: rgb(125,184,55);
+  border: 1px solid black;
+  width: 70px;
+  padding: 1em 0;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.false{
+  background-color: red;
+  border: 1px solid black;
+  width: 70px;
+  padding: 1em 0;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+#seats{
+  max-width: 30%;
+  margin: 0 auto;
+}
+
 a {
   color: gold!important;
 }
