@@ -22,8 +22,6 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
-    @flight = Flight.all
-
     @flights = Flight.find(params[:id])
     
     respond_to do |format|
