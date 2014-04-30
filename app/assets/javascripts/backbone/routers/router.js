@@ -6,7 +6,7 @@ BurningAirline.Routers.appRouter = Backbone.Router.extend({
   },
 
   index: function () {
-    console.log('here')
+    console.log('I am in router.js')
     var view = new BurningAirline.Views.AppView({collection: BurningAirline.burningFlights});
     view.render();
   },
