@@ -15,8 +15,14 @@ a1 = Airplane.new(:name => '707', :row => '24', :column => '4')
 a1.save
 
 # Flight' Seed
-f1 = Flight.new(:flight_no => 'BX788', :origin => 'syd', :destination => 'ldn', :data => 'friday', :airplane_id => 1)
+f1 = Flight.new(:flight_no => 'BX788', :origin => 'Sydney', :destination => 'London', :date => 'Friday', :airplane_id => 1)
+f2 = Flight.new(:flight_no => 'BX555', :origin => 'New York', :destination => 'Chicago', :date => 'Monday', :airplane_id => 1)
+f3 = Flight.new(:flight_no => 'BX111', :origin => 'Paris', :destination => 'Sydney', :date => 'Saturday', :airplane_id => 2)
+f4 = Flight.new(:flight_no => 'BX222', :origin => 'Berlin', :destination => 'Tokyo', :date => 'Sunday', :airplane_id => 3)
 f1.save
+f2.save
+f3.save
+f4.save
 
 # Seat' Seed
 s1 = Seat.new(:column_row => 'A8', :flight_id => 1, :available => false)

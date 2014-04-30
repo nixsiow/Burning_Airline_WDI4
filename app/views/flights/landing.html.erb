@@ -1,13 +1,26 @@
+<div id="search">
+</div>
+
 <div id="main">
 </div>
+
 
 <script id="appView" type="text/x-underscore-template">
   <h1>All Flights</h1>
   <ul id="flights"></ul>
+
+  <!-- form to make a search -->
+  <form>
+    <h1>Search</h1>
+    <input id="origin" placeholder="Origin">
+    <input id="destination" placeholder="Destination">
+    <button>Search</button>
+  </form>
+  <br>
 </script>
 
 <script id="flightListView" type="text/x-underscore-template">
-  <a href="#flights/{{ id }}">{{ flight_no }}</a>
+  <a href="#flights/{{ id }}">Flight Reference: {{ flight_no }}, Origin: {{origin}}, Destination: {{destination}}, "Date: " {{date}}, Airplane id:  {{airplane_id}}, flight id: {{id}} </a>
 </script>
 
  <script id="flightView" type="text/x-underscore-template">
@@ -18,7 +31,6 @@
       <p>{{ destination }}</p>
       <p>{{ date }}</p>
       <p>{{ airplane_id }}</p>
-      <P>hjkehfjkeafhea </p>
     </div>
     <hr>
   </div>
