@@ -5,6 +5,7 @@ BurningAirline.Views.AppView = Backbone.View.extend({
   },
 
   addSearch: function(event){
+
   	event.preventDefault();
   	var contentOrigin = $('#origin').val();
   	var contentDestination = $('#destination').val();
