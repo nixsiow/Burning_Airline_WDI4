@@ -7,7 +7,7 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
   createReservation: function() {
     
 
-    console.log("res");
+    console.log("hi Nix");
   },
 
   initialize: function () {
@@ -22,14 +22,16 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
     
     var seat_id = ''
     var seat_class = ''
+
+    console.log(this.model.attributes.seats);
     
     for (var i=0;i<flight.seatCount;i++)
        { 
-        // var seatView = new BurningAirline.Views.SeatView({model: seat});
-        // this.$el.append(seatView.render().el);
-        seat_id = flight.seats[i].column_row
-        seat_class = flight.seats[i].available
-           $('#seats').append('<div id="' + seat_id + '" class="' + seat_class + '"' + '>' + seat_id + '</div>');
+        var seatView = new BurningAirline.Views.SeatView({model: seat});
+        this.$el.append(seatView.render().el);
+        // seat_id = flight.seats[i].column_row
+        // seat_class = flight.seats[i].available
+        //    $('#seats').append('<div id="' + seat_id + '" class="' + seat_class + '"' + '>' + seat_id + '</div>');
       } 
   }
 });
