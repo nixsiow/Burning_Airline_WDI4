@@ -27,7 +27,7 @@ class AirplanesController < ApplicationController
   # POST /airplanes.json
   def create
     @airplane = Airplane.new(airplane_params)
-
+    
     respond_to do |format|
       if @airplane.save
         format.html { redirect_to @airplane, notice: 'Airplane was successfully created.' }
@@ -37,6 +37,19 @@ class AirplanesController < ApplicationController
         format.json { render json: @airplane.errors, status: :unprocessable_entity }
       end
     end
+
+    # rows_array = (1..@airplane.row.to_i).to_a
+    # column_array = (1..@airplane.column.to_i).to_a
+    
+
+    # rows_array.each do |row_name|
+    #   column_array.each do |column_name|
+    #     seat_name = row_name.to_s + "-" + column_name.to_s 
+    #     seat = Seat.create(:column_row => seat_name, :flight_id => @airplane.id, :available => true)
+    #   end
+    # end
+
+    
   end
 
   # PATCH/PUT /airplanes/1

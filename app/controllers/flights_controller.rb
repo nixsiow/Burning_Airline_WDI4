@@ -15,7 +15,7 @@ class FlightsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.json { render json: @flights, :include => [:airplane, :reservations, :users] }
+      format.json { render json: @flights, :include => [:airplane, :reservations, :users, :seats] }
     end
   end
 
@@ -53,6 +53,20 @@ class FlightsController < ApplicationController
         format.json { render json: @flight.errors, status: :unprocessable_entity }
       end
     end
+
+    airplane = Airplane.find(@flight.airplane_id)
+
+    rows_array = (1..airplane.row.to_i).to_a
+    column_array = (1..airplane.column.to_i).to_a
+    
+
+    rows_array.each do |row_name|
+      column_array.each do |column_name|
+        seat_name = row_name.to_s + "-" + column_name.to_s 
+        seat = Seat.create(:column_row => seat_name, :flight_id => @flight.id, :available => true)
+      end
+    end
+
   end
 
   # PATCH/PUT /flights/1
