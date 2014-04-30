@@ -25,11 +25,11 @@ a3.save
 
 
 # Flight' Seed
-f1 = Flight.new(:flight_no => 'BX788', :origin => 'Sydney', :destination => 'London', :date => 'Friday', :airplane_id => 1)
-f2 = Flight.new(:flight_no => 'BX555', :origin => 'New York', :destination => 'Chicago', :date => 'Monday', :airplane_id => 1)
-f3 = Flight.new(:flight_no => 'BX111', :origin => 'Paris', :destination => 'Sydney', :date => 'Saturday', :airplane_id => 2)
-f4 = Flight.new(:flight_no => 'BX222', :origin => 'Berlin', :destination => 'Tokyo', :date => 'Sunday', :airplane_id => 3)
-f5 = Flight.new(:flight_no => 'BX333', :origin => 'Berlin', :destination => 'Paris', :date => 'Friday', :airplane_id => 3)
+f1 = Flight.new(:flight_no => 'BX788', :origin => 'Sydney', :destination => 'London', :date => '08/05/2014', :airplane_id => 1)
+f2 = Flight.new(:flight_no => 'BX555', :origin => 'New York', :destination => 'Chicago', :date => '12/05/2014', :airplane_id => 1)
+f3 = Flight.new(:flight_no => 'BX111', :origin => 'Paris', :destination => 'Sydney', :date => '15/05/2014', :airplane_id => 2)
+f4 = Flight.new(:flight_no => 'BX222', :origin => 'Berlin', :destination => 'Tokyo', :date => '06/05/2014', :airplane_id => 3)
+f5 = Flight.new(:flight_no => 'BX333', :origin => 'Berlin', :destination => 'Paris', :date => '22/05/2014', :airplane_id => 3)
 
 f1.save
 f2.save

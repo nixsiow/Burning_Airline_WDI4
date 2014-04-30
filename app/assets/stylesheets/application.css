@@ -15,6 +15,7 @@
 
 @import "bootstrap.css";
 
+
 html {
   cursor: url(http://cur.cursors-4u.net/mechanics/mec-2/mec157.cur), default !important;
 }
@@ -29,12 +30,20 @@ html > body {
   text-shadow: 1px 1px 1px black;
 }
 
+.flights_title{
+  display: none;
+}
+
 a {
   color: gold!important;
 }
 
 input {
   max-width: 250px;
+}
+
+.field input {
+  color: black;
 }
 
 h1.title, h1.title a {

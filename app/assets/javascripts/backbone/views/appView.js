@@ -12,6 +12,8 @@ BurningAirline.Views.AppView = Backbone.View.extend({
   	var matches = [];
   	var error;
 
+  	//When the user makes a search, display the title "All flights"
+  	$('.flights_title').show();  	
   	//If statement to check the inputs.
   		//If there is an origin but no destination, display the flights with a match for that origin.
   		if (contentOrigin != '' && contentDestination == ''){
@@ -65,8 +67,9 @@ BurningAirline.Views.AppView = Backbone.View.extend({
 
     this.collection.each(function (flight) {
 
-      var view = new BurningAirline.Views.FlightListView({model:flight});
-      $('#flights').append(view.render().el);
+    var view = new BurningAirline.Views.FlightListView({model:flight});
+    //Hide the flights at first. Should be displayed only when the user makes a search
+    //$('#flights').append(view.render().el);
     });
   }
 });
