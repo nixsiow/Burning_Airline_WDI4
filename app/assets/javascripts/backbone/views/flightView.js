@@ -15,10 +15,10 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
     console.log(flight);
     flight.seats
 
-    // for (var i=0;i<flight.seatCount;i++)
-    //   { 
+    for (var i=0;i<flight.seatCount;i++)
+       { 
         
-    //       this.$el.append('<div id="' + id + '">seats and stuff</div>');
-    //   } 
+           this.$el.append('<div id="' + '">seats and stuff</div>');
+      } 
   }
 });
