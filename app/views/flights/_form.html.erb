@@ -13,25 +13,25 @@
 
   <div class="field">
     <%= f.label :flight_no %><br>
-    <%= f.text_field :flight_no %>
+    <%= f.text_field :flight_no, :class => 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :origin %><br>
-    <%= f.text_field :origin %>
+    <%= f.text_field :origin, :class => 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :destination %><br>
-    <%= f.text_field :destination %>
+    <%= f.text_field :destination, :class => 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.text_field :date %>
+    <%= f.text_field :date, :class => 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :airplane_id %><br>
-    <%= f.number_field :airplane_id %>
+    <%= f.select :airplane_id, Airplane.all.map {|airplane| [airplane.name, airplane.id]}, :include_blank => true, :class => 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <br><%= f.submit "Create flight", :class => 'btn btn-success' %>
   </div>
 <% end %>
