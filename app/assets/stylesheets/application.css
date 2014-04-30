@@ -15,7 +15,34 @@
 
 @import "bootstrap.css";
 
-body {
-  mix-width: 960px;
+html {
+  cursor: url(http://cur.cursors-4u.net/mechanics/mec-2/mec157.cur), default !important;
+}
+
+html > body {
+  /*background: url('http://www.zastavki.com/pictures/1920x1200/2008/Fantasy_The_plane_with_the_steam_engine_009605_.jpg') center center fixed;*/
+  background-size: cover;
+  min-width: 960px;
+  padding: 50px;
+  color: black;
+  font-family: 'Raleway', 'sans-serif';
+  /*text-shadow: 1px 1px 1px black;*/
+}
+
+input {
+  max-width: 250px;
+}
+
+h1.title, h1.title a {
+  font-family: 'Lobster', 'cursive';
+  font-size: 80px;
+  color: #f9325b;
+  text-shadow: 1px 1px 1px #ff124b;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.yield_container {
   margin: 0 auto;
 }
