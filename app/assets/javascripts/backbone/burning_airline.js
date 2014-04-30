@@ -17,7 +17,7 @@ window.BurningAirline = {
   Views: {}
 }
 
-// Instantiate router once tweets have been fetched, then listen for URL changes
+// Instantiate router once flights have been fetched, then listen for URL changes
 $(document).ready(function () {
     BurningAirline.burningFlights = new BurningAirline.Collections.Flights();
     BurningAirline.burningFlights.fetch().done(function () {
