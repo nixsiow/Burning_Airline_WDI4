@@ -25,15 +25,45 @@
 </head>
 <body>
 
-  <h1 class="title"><a href="/">Burning Airline.</a></h1>
+  <h1 class="title">
+    <a href="/">
+      <span class="grow fire">B</span>
+      <span class="grow burn">u</span>
+      <span class="grow burn">r</span>
+      <span class="grow burn">n</span>
+      <span class="grow burn">i</span>
+      <span class="grow burn">n</span>
+      <span class="grow fire">g</span>
+      <span class="grow burn"></span>
+      <span class="grow fire">A</span>
+      <span class="grow burn">i</span>
+      <span class="grow burn">r</span>
+      <span class="grow burn">l</span>
+      <span class="grow burn">i</span>
+      <span class="grow burn">n</span>
+      <span class="grow fire">e</span>
+    </a>
+  </h1>
 
   <div id="user">
     <% if user_signed_in? %>
-      <%= button_to 'Sign Out', destroy_user_session_path, :method => 'delete', :class => 'btn btn-primary' %>
+      <div class="user_view">
+        <kbd><%= current_user.username %></kbd><br>
+        <%= button_to 'Sign Out', destroy_user_session_path, :method => 'delete', :class => 'btn btn-primary' %><br>
+
+        <% if current_user.admin? %>
+          <br><%= button_to "Create Airplane", new_airplane_path, :method => 'get', :class => 'btn btn-info' %>
+          <%= button_to "Create Flight", new_flight_path, :method => 'get', :class => 'btn btn-info' %>
+        <% end %>
+
+      </div>
     <% else %>
-        <%= link_to "Sign up", new_user_registration_path %><br />
-        <%= link_to "Sign in", new_user_session_path %><br />
+      <div class="guest_view">
+        <%= button_to "Sign up", new_user_registration_path, :method => 'get', :class => 'btn btn-primary' %>
+        <%= button_to "Sign in", new_user_session_path, :method => 'get', :class => 'btn btn-primary' %>
+      </div>
     <% end %>
+
   </div>
   
   <p class="notice text-success"><%= notice %></p>

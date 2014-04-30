@@ -1,6 +1,8 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
 
+  before_filter :check_if_admin
+
   # GET /airplanes
   # GET /airplanes.json
   def index
@@ -70,5 +72,9 @@ class AirplanesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def airplane_params
       params.require(:airplane).permit(:name, :row, :column)
+    end
+
+    def check_if_admin
+      redirect_to(root_path) if current_user.nil? || current_user.admin == false
     end
 end
