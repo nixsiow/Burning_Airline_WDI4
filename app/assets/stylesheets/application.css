@@ -68,6 +68,7 @@ a {
 
 input {
   max-width: 250px;
+  opacity: 0.9;
 }
 
 .field input {
@@ -91,6 +92,14 @@ h1.title, h1.title a {
 
 .user_view form , .guest_view form {
   display: inline-block;
+}
+
+/*.user_view, .guest_view, p.notice, p.alert {
+  text-align: center;
+}*/
+
+.text-center {
+  text-align: center;
 }
 
 

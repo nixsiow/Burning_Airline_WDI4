@@ -3,25 +3,29 @@
 
 <div id="main">
 </div>
-
+<% if !user_signed_in? %>
+  <h2 class="text-center">Keep Calm!</h2>
+  <h2 class="text-center">You're now in the safest airline in the world.</h2>
+  <h2 class="text-center">Please sign in/sign up to use this service.</h2>
+<% end %>
 
 <script id="appView" type="text/x-underscore-template">
   <!-- The title All flights will be hidden at first, it will be displayed only after a user makes a search -->
-  <h1 class="flights_title">All Flights</h1>
+  <h1 class="flights_title">All Flights  <i class="glyphicon glyphicon-plane"></i><i class="glyphicon glyphicon-plane"></i></h1>
   <ul id="flights"></ul>
 
   <!-- form to make a search -->
   <form>
-    <h1>Search flights</h1>
+    <h1 class="burning">Search flights  <i class="glyphicon glyphicon-plane"></i></h1>
     <input id="origin" class="form-control" placeholder="From">
     <input id="destination" class="form-control" placeholder="To">
-    <button class="btn btn-success">Search</button>
+    <br><button class="grow btn btn-success">Search</button>
   </form>
   <br>
 </script>
 
 <script id="flightListView" type="text/x-underscore-template">
-  <a href="#flights/{{ id }}">From: {{origin}}, To: {{destination}}, Flight Reference: {{ flight_no }}, Date: {{date}}, Airplane id:  {{airplane_id}}, flight id: {{id}} </a>
+  <div><a href="#flights/{{ id }}">From: {{origin}}, To: {{destination}}, Flight Reference: {{ flight_no }}, Date: {{date}}, Airplane id:  {{airplane_id}}, flight id: {{id}} </a></div>
 </script>
 
  <script id="flightView" type="text/x-underscore-template">
@@ -33,8 +37,8 @@
       <p><strong>Date: </strong> {{ date }}</p>
       <p><strong>Airplane id:</strong> {{ airplane_id }}</p>
       <p><strong>Number of seats: </strong> {{ seatCount }}</p>
-      <button>Book flight</button>
-      <button><a href='#'>Back</a></button>
+      <button class="grow btn btn-success">Book flight</button>
+      <button class="grow btn btn-info"><a href='#'>Back</a></button>
     </div>
     <hr>
     <div id="seats">

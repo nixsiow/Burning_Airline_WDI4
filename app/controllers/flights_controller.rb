@@ -1,9 +1,8 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
-  # before_filter :check_if_logged_in
-    # Nix add this
-  # before_filter :authenticate_user!  # Tell devise to use :user map
+  before_filter :check_if_logged_in, :except => [:landing]
+
 
   def landing
   end

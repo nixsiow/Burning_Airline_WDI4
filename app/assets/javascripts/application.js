@@ -20,3 +20,16 @@
 //= require backbone_datalink
 //= require backbone/burning_airline
 //= require_tree .
+
+
+$(document).ready(function() {
+  window.burn = function() { 
+    $('.burning').burn({
+      k: 10,
+      w: 10
+    });
+  };
+  window.burn();
+
+});
+

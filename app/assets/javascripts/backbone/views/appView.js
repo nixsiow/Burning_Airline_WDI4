@@ -6,7 +6,7 @@ BurningAirline.Views.AppView = Backbone.View.extend({
 
   addSearch: function(event){
 
-  	event.preventDefault();
+  	event.preventDefault(window.burn());
   	var contentOrigin = $('#origin').val();
   	var contentDestination = $('#destination').val();
   	$('#flights').empty();

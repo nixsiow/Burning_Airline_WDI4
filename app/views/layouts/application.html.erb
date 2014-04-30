@@ -47,27 +47,27 @@
 
   <div id="user">
     <% if user_signed_in? %>
-      <div class="user_view">
-        <kbd><%= current_user.username %></kbd><br>
-        <%= button_to 'Sign Out', destroy_user_session_path, :method => 'delete', :class => 'btn btn-primary' %><br>
+      <br><div class="user_view text-center">
+        <kbd class="burning"><%= current_user.username %></kbd><br>
+        <%= button_to 'Sign Out', destroy_user_session_path, :method => 'delete', :class => 'grow btn btn-primary' %>
 
         <% if current_user.admin? %>
-          <br><%= button_to "Create Airplane", new_airplane_path, :method => 'get', :class => 'btn btn-info' %>
-          <%= button_to "Create Flight", new_flight_path, :method => 'get', :class => 'btn btn-info' %>
+          <%= button_to "Create Airplane", new_airplane_path, :method => 'get', :class => 'grow btn btn-info' %>
+          <%= button_to "Create Flight", new_flight_path, :method => 'get', :class => 'grow btn btn-info' %>
         <% end %>
 
       </div>
     <% else %>
-      <div class="guest_view">
-        <%= button_to "Sign up", new_user_registration_path, :method => 'get', :class => 'btn btn-primary' %>
-        <%= button_to "Sign in", new_user_session_path, :method => 'get', :class => 'btn btn-primary' %>
+      <br><div class="guest_view text-center">
+        <%= button_to "Sign up", new_user_registration_path, :method => 'get', :class => 'grow btn btn-primary' %>
+        <%= button_to "Sign in", new_user_session_path, :method => 'get', :class => 'grow btn btn-primary' %>
       </div>
     <% end %>
 
   </div>
   
-  <p class="notice text-success"><%= notice %></p>
-  <p class="alert text-danger"><%= alert %></p>
+  <p class="notice text-center"><%= notice %></p>
+  <p class="alert text-danger burning text-center"><%= alert %></p>
   
   <div class="yield_container">
     <%= yield %>
