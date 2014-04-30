@@ -10,7 +10,7 @@
      |               |_| |
   ___|             |\___/ 
  /    \___________/    \
- \_____________________/    YEAH!
+ \_____________________/    Burning Airline!
 -->
 
 <html>
@@ -19,15 +19,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  
-<%= yield %>
 
-<%= button_to 'Sign Out', destroy_user_session_path, :method => 'delete', :class => 'btn btn-primary signout_btn grow' %>
+  <h1 class="title"><a href="/">Burning Airline.</a></h1>
+
+  <div id="user">
+    <% if user_signed_in? %>
+      <%= button_to 'Sign Out', destroy_user_session_path, :method => 'delete', :class => 'btn btn-primary' %>
+    <% else %>
+        <%= link_to "Sign up", new_user_registration_path %><br />
+        <%= link_to "Sign in", new_user_session_path %><br />
+    <% end %>
+  </div>
+  
+  <p class="notice text-success"><%= notice %></p>
+  <p class="alert text-danger"><%= alert %></p>
+  
+  <div class="yield_container">
+    <%= yield %>
+  </div>
+
 
 </body>
 </html>

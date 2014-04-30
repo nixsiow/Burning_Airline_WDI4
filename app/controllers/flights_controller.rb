@@ -8,11 +8,22 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @flights, :include => :airplane} 
+    end
   end
 
   # GET /flights/1
   # GET /flights/1.json
   def show
+    @flight = Flight.all
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @flights, :include => :airplane} 
+    end
   end
 
   # GET /flights/new
