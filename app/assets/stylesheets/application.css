@@ -37,6 +37,10 @@ input {
   max-width: 250px;
 }
 
+.field input {
+  color: black;
+}
+
 h1.title, h1.title a {
   font-family: 'Lobster', 'cursive';
   font-size: 80px;
