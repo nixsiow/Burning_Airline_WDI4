@@ -31,17 +31,17 @@ f3.save
 f4.save
 
 # Seat' Seed
-s1 = Seat.new(:column_row => 'A8', :flight_id => 1, :available => false)
+s1 = Seat.new(:column_row => 'A8', :flight_id => f1.id, :available => false)
 s1.save
 
-s2 = Seat.new(:column_row => 'B12', :flight_id => 1, :available => false)
+s2 = Seat.new(:column_row => 'B12', :flight_id => f2.id, :available => false)
 s2.save
 
 # Reservation' Seed
-r1 = Reservation.new(:user_id => 1, :flight_id => 1, :seat_id => 1)
+r1 = Reservation.new(:user_id => u1.id, :flight_id => f1.id, :seat_id => s1.id)
 r1.save
 
-r2 = Reservation.new(:user_id => 1, :flight_id => 1, :seat_id => 2)
+r2 = Reservation.new(:user_id => u1.id, :flight_id => f2.id, :seat_id => s2.id)
 r2.save
 
 
