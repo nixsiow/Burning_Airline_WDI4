@@ -1,7 +1,13 @@
 BurningAirline.Views.FlightView = Backbone.View.extend({
   el: '#main',
   events: {
+    'click .true': 'createReservation'
+  },
+
+  createReservation: function() {
     
+
+    console.log("res");
   },
 
   initialize: function () {
@@ -19,6 +25,8 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
     
     for (var i=0;i<flight.seatCount;i++)
        { 
+        // var seatView = new BurningAirline.Views.SeatView({model: seat});
+        // this.$el.append(seatView.render().el);
         seat_id = flight.seats[i].column_row
         seat_class = flight.seats[i].available
            $('#seats').append('<div id="' + seat_id + '" class="' + seat_class + '"' + '>' + seat_id + '</div>');
