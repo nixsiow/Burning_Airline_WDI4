@@ -13,12 +13,13 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
     var flight = this.model.toJSON();
     this.$el.html(this.template(flight));
     
-    flight.seats[0].column_row
-
+    
+    var seat_id = ''
+    
     for (var i=0;i<flight.seatCount;i++)
        { 
-        
-           this.$el.append('<div id="' + '">seats and stuff</div>');
+        seat_id = flight.seats[i].column_row
+           this.$el.append('<div id="' + seat_id + '">seats and stuff</div>');
       } 
   }
 });
