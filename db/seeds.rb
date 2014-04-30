@@ -10,6 +10,10 @@ Reservation.destroy_all
 u1 = User.new(:username => 'user1', :email => 'user1@user.com', :password => 'abcd1234', :password_confirmation => 'abcd1234')
 u1.save
 
+# Admin's Seed
+admin = User.new(:username => 'admin', :email => 'admin@admin.com', :password => 'abcd1234', :password_confirmation => 'abcd1234', :admin => true)
+admin.save
+
 # Airplace' Seed
 a1 = Airplane.new(:name => '707', :row => '24', :column => '4')
 a2 = Airplane.new(:name => '737', :row => '20', :column => '6')
