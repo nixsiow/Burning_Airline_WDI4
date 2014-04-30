@@ -1,6 +1,10 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
+  # before_filter :check_if_logged_in
+    # Nix add this
+  # before_filter :authenticate_user!  # Tell devise to use :user map
+
   def landing
   end
 
@@ -11,7 +15,7 @@ class FlightsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.json { render json: @flights, :include => :airplane} 
+      format.json { render json: @flights, :include => [:airplane, :reservations, :users] }
     end
   end
 
@@ -84,5 +88,9 @@ class FlightsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
       params.require(:flight).permit(:flight_no, :origin, :destination, :date, :airplane_id)
+    end
+
+    def check_if_logged_in
+      redirect_to(root_path) if current_user.nil?
     end
 end

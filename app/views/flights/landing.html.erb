@@ -12,9 +12,9 @@
   <!-- form to make a search -->
   <form>
     <h1>Search</h1>
-    <input id="origin" placeholder="Origin">
-    <input id="destination" placeholder="Destination">
-    <button>Search</button>
+    <input id="origin" class="form-control" placeholder="Origin">
+    <input id="destination" class="form-control" placeholder="Destination">
+    <button class="btn btn-success">Search</button>
   </form>
   <br>
 </script>
@@ -31,7 +31,15 @@
       <p>{{ destination }}</p>
       <p>{{ date }}</p>
       <p>{{ airplane_id }}</p>
+      <p>{{ seatCount }}</p>
     </div>
     <hr>
   </div>
 </script>
+
+<script id='seats' type="text/x-underscore-template">
+  <div class='seats'>
+    <p>seat</p>
+  </div>
+</script>
+
