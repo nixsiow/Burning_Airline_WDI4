@@ -18,6 +18,7 @@ BurningAirline.Views.SeatView = Backbone.View.extend({
     console.log('thank you for reserving seat', this.model.column_row);
 
     this.model.available = false;
+    console.log("This seat is no longer available because we changed it's availabilty to ", this.model.available);
 
   }
 

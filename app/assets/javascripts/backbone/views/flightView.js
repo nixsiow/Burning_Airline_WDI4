@@ -7,7 +7,7 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
 
   turnFalse: function() {
     alert("congratulations, you've booked a flight on Burning Airlines")
-    console.log(this.model.attributes.seats);
+    
     
   },
   turnTrue: function() {
