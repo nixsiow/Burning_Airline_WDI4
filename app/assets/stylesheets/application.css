@@ -57,9 +57,14 @@ html > body {
   margin-bottom: 2px;
 }
 
-#seats{
+.seats{
   max-width: 30%;
   margin: 0 auto;
+  display: inline-block;
+}
+
+#seat_container{
+  max-width: 30%;
 }
 
 a {

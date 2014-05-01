@@ -1,5 +1,5 @@
 BurningAirline.Views.SeatView = Backbone.View.extend({
-  el: '<div/>',
+  el: '<div class="seats"/>',
   events: {
     'click': 'toggleReservation'
   },
@@ -9,6 +9,7 @@ BurningAirline.Views.SeatView = Backbone.View.extend({
   },
 
   render: function () {
+    // this.$el.html(this.template(this.model));
     this.$el.html(this.template(this.model));
     return this;
   },

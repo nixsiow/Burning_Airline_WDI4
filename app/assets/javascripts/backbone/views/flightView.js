@@ -30,8 +30,6 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
     this.$el.html(this.template(flight));
     
     
-    var seat_id = ''
-    var seat_class = ''
     console.log(this.model.attributes.seats);
     
     for (var i=0;i<flight.seatCount;i++) { 

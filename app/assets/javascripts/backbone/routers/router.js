@@ -14,7 +14,7 @@ BurningAirline.Routers.appRouter = Backbone.Router.extend({
   showFlight: function (id) {
     var flight = BurningAirline.burningFlights.get(id);
     new BurningAirline.Views.FlightView({model:flight});
-    debugger;
+    
   },
 
   goHome: function () {
