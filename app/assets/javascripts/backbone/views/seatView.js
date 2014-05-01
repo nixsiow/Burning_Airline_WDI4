@@ -16,6 +16,9 @@ BurningAirline.Views.SeatView = Backbone.View.extend({
 
   toggleReservation: function () {
     console.log('thank you for reserving seat', this.model.column_row);
+
+    this.model.available = false;
+
   }
 
   

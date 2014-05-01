@@ -6,13 +6,9 @@ BurningAirline.Views.FlightView = Backbone.View.extend({
   },
 
   turnFalse: function() {
-    
     alert("congratulations, you've booked a flight on Burning Airlines")
-    var id = $(this).attr("id");
-    // // console.log($(this));
-    // $(".true").attr('class', 'false');
-    // // $(".true").attr("class","false");
-    // console.log($(this));
+    console.log(this.model.attributes.seats);
+    
   },
   turnTrue: function() {
 
